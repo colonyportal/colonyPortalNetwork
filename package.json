@@ -4,11 +4,10 @@
   "description": "",
   "main": "truffle-config.js",
   "scripts": {
-    "preinstall": "git submodule update --init --remote ./lib/colonyNetwork && cd lib/colonyNetwork && yarn",
-    "create:testColony": "npm run start:blockchain:client && npm run start:trufflePig && npm run deploy:colony && node scripts/createTestColony.js",
-    "start:blockchain:client": "xterm -e lib/colonyNetwork/scripts/start-blockchain-client.sh",
+    "preinstall": "git submodule update --init --remote ./lib/colonyNetwork && cd lib/colonyNetwork && git submodule update --init --remote && yarn",
+    "create:testColony": "npm run start:blockchain:client && npm run deploy:colony && node scripts/createTestColony.js",
+    "start:blockchain:client": "xterm -e 'bash lib/colonyNetwork/scripts/start-blockchain-client.sh' &",
     "stop:blockchain:client": "cd lib/colonyNetwork && npm run stop:blockchain:client",
-    "start:trufflePig": "cd lib/colonyNetwork && trufflepig --ganacheKeyFile ganache-accounts.json",
     "deploy:contracts": "cd lib/colonyNetwork && truffle migrate --compile-all --reset"
   },
   "keywords": [],
