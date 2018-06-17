@@ -5,7 +5,7 @@
   "main": "truffle-config.js",
   "scripts": {
     "preinstall": "git submodule update --init --remote ./lib/colonyNetwork && cd lib/colonyNetwork && git submodule update --init --remote && yarn",
-    "create:testColony": "npm run start:blockchain:client && npm run deploy:colony && node scripts/createTestColony.js",
+    "create:testColony": "npm run start:blockchain:client && npm run deploy:contracts && node scripts/createTestColony.js",
     "start:blockchain:client": "xterm -e 'bash lib/colonyNetwork/scripts/start-blockchain-client.sh' &",
     "stop:blockchain:client": "cd lib/colonyNetwork && npm run stop:blockchain:client",
     "deploy:contracts": "cd lib/colonyNetwork && truffle migrate --compile-all --reset"

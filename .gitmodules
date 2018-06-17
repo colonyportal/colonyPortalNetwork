@@ -1,4 +1,4 @@
 [submodule "lib/colonyNetwork"]
 	path = lib/colonyNetwork
 	url = https://github.com/JoinColony/colonyNetwork
-	branch = develop
+	branch = master

@@ -1,10 +1,16 @@
 // Import the prerequisites
 const { providers, Wallet } = require("ethers");
 const { default: EthersAdapter } = require("@colony/colony-js-adapter-ethers");
+
+const { TrufflePig } = require("trufflepig");
 const { TrufflepigLoader } = require("@colony/colony-js-contract-loader-http");
 
 // Import the ColonyNetworkClient
 const { default: ColonyNetworkClient } = require("@colony/colony-js-client");
+
+// Create the truffle pig instance
+const pig = new TrufflePig();
+pig.start();
 
 // Create an instance of the Trufflepig contract loader
 const loader = new TrufflepigLoader();
