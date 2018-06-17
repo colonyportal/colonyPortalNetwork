@@ -5,7 +5,7 @@
   "main": "truffle-config.js",
   "scripts": {
     "preinstall": "git submodule update --init --remote ./lib/colonyNetwork && cd lib/colonyNetwork && git submodule update --init --remote && yarn",
-    "create:testColony": "npm run start:ganache && npm run start:trufflepig && npm run deploy:contracts && node scripts/createTestColony.js",
+    "create:testColony": "npm run start:ganache && npm run deploy:contracts && npm run start:trufflepig && sleep 10s && node scripts/createTestColony.js",
     "start:ganache": "cd lib/colonyNetwork && xterm -e 'ganache-cli -d --gasLimit 7000000000000 --acctKeys ./ganache-accounts.json' &",
     "start:trufflepig": "cd lib/colonyNetwork && xterm -e 'trufflepig --ganacheKeyFile ./ganache-accounts.json' &",
     "deploy:contracts": "cd lib/colonyNetwork && truffle migrate --compile-all --reset"
