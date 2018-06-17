@@ -4,7 +4,7 @@
   "description": "",
   "main": "truffle-config.js",
   "scripts": {
-    "preinstall": "git submodule update --init --recursive && cd lib/colonyNetwork && yarn",
+    "preinstall": "git submodule update --remote --recursive && cd lib/colonyNetwork && yarn",
     "deploy-contracts": "cd lib/colonyNetwork && ./node_modules/.bin/truffle migrate --compile-all --reset"
   },
   "keywords": [],
