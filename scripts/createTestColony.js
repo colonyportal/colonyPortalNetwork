@@ -58,23 +58,27 @@ const example = async () => {
 
   await colonyClient.createTask.send({
     specificationHash: "QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG",
-    domainId: 1
+    domainId: 0
   });
   await colonyClient.createTask.send({
     specificationHash: "QmSoLju6m7xTh3DuokvT3886QRYqxAzb1kShaanJgW36yx",
-    domainId: 1
+    domainId: 0
   });
   await colonyClient.createTask.send({
     specificationHash: "QmWHyrPWQnsz1wxHR219ooJDYTvxJPyZuDUPSDpdsAovN5",
-    domainId: 2
+    domainId: 1
   });
   await colonyClient.createTask.send({
     specificationHash: "QmdXzZ25cyzSF99csCQmmPZ1NTbWTe8qtKFaZKpZQPdTFB",
-    domainId: 2
+    domainId: 1
+  });
+  await colonyClient.createTask.send({
+    specificationHash: "QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ",
+    domainId: 1
   });
   await colonyClient.createTask.send({
     specificationHash: "Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a",
-    domainId: 2
+    domainId: 1
   });
 
   const taskCount = (await colonyClient.getTaskCount.call()).count;
