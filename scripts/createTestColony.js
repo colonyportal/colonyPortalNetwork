@@ -55,7 +55,7 @@ const example = async () => {
   const addDomainResponds = await colonyClient.addDomain.send({
     parentSkillId: skillCount
   });
-
+/*
   await colonyClient.createTask.send({
     specificationHash: "QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG",
     domainId: 0
@@ -80,6 +80,7 @@ const example = async () => {
     specificationHash: "Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a",
     domainId: 1
   });
+  */
 
   const taskCount = (await colonyClient.getTaskCount.call()).count;
   const domainCount = (await colonyClient.getDomainCount.call()).count;
